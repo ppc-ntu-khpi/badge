@@ -3,6 +3,6 @@
 
 Приклад:
 
-!(https://github.com/ppc-ntu-khpi/badge/blob/master/Sample.PNG)
+![Приклад беджа](https://github.com/ppc-ntu-khpi/badge/blob/master/Sample.PNG)
 
 Це перша, початкова версія, в ній є певні баги й дрібні недоліки, які з часом будуть усунуті.
