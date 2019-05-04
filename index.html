@@ -156,14 +156,14 @@
                 //       bar code (passing this.speakerId)
                 this.drawBackground();
                 this.drawTopText();
+                this.drawLogo();
                 this.drawSpeakerName();
                 if (image) {
                     this.drawSpeakerImage(image);
                 } else {
                     this.drawImagePlaceholder();
                 }
-                this.drawBarCode(this.speakerId);
-                this.drawLogo();
+                this.drawBarCode(this.speakerId);                
                 this.drawSpeakerTitle();
             }
 
