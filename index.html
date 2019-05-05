@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>ППК НТУ "ХПІ" :: створення беджа</title>
+
+  <!-- Bootstrap core CSS -->
+  <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-G3Fme2BM4boCE9tHx9zHvcxaQoAkksPQa/8oyn1Dzqv7gdcXChereUsXGx6LtbqA" crossorigin="anonymous"> -->
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/yeti/bootstrap.min.css" rel="stylesheet" integrity="sha384-w6tc0TXjTUnYHwVwGgnYyV12wbRoJQo9iMlC2KdkdmVvntGgzT9jvqNEF/uKaF4m" crossorigin="anonymous"> -->
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/spacelab/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sZG5VVk41YqhJjYXgJFoRVd3d2AdDgy4oyIytQJMGx/Mizz1N+5bgKQBSCGfKQnP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/small-business.css" rel="stylesheet">
+  <link href="css/print.css" media="print" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="far fa-id-badge"></i>&nbsp;&nbsp; Створення беджа працівника або
+        студента коледжу</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <!-- <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li> -->
+          <li class="nav-item">
+            <a class="btn btn-info my-2 my-sm-0" data-toggle="modal" data-target="#modalabout" style="color:white;">Що це?</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-4">
+      <div class="col-lg-7 badge">
+        <!-- <img class="img-fluid rounded mb-4 mb-lg-0" src="http://placehold.it/900x400" alt=""> -->
+        <canvas id="mybadge" width="600" height="250" style="border: 1px solid #888" data-speaker-id="0662229627"
+          data-speaker-name="Василь" data-speaker-surname="Пупкін" data-speaker-title="викладач">
+        </canvas>
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <h1 class="font-weight-light">Створіть свій бедж самостійно</h1>
+        <p align="justify">This is a template that is great for small businesses. It doesn't have too much fancy flare
+          to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for
+          any project you want!</p>
+        <!-- <a class="btn btn-primary" href="#">Call to Action!</a> -->
+        <button id="print" onclick="window.print();" class="btn btn-success float-right">
+          <i class="fas fa-print"></i>&nbsp;&nbsp;Друкувати бедж</button><br>
+
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+
+    <!-- Call to Action Well -->
+    <div class="card text-white bg-info my-3 py-2 text-center">
+      <div class="card-body">
+        <p class="text-white m-0">This call to action card is a great place to showcase some important information or
+          display a clever tagline!</p>
+      </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-6 mb-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Введіть свої дані</h2>
+            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p> -->
+            <div class="form-group row">
+              <label for="name" class="col-form-label">Ваше ім'я:</label>
+              <input type="text" id="name" class="form-control" />
+
+              <label for="surname" class="col-form-label">Ваше прізвище:</label>
+              <input type="text" id="surname" class="form-control" />
+
+              <label for="title" class="col-form-label">Ваша посада:</label>
+              <select id="title" class="form-control">
+                <option value="викладач">викладач</option>
+                <option value="студент">студент</option>
+                <option value="працівник коледжу">працівник коледжу</option>
+                <option value="заступник директора">заступник директора</option>
+                <option value="директор">директор</option>
+              </select>
+
+              <label for="phone" class="col-form-label">Ваш телефон:</label>
+              <input id="phone" type="tel" pattern="[\0]\d{2}\d{7}" class="form-control" />
+            </div>
+          </div>
+          <div class="card-footer">
+            <button id="create" class="btn btn-success btn-block"><i class="fas fa-check"></i>&nbsp;&nbsp;
+              Сформувати бедж</button>
+
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-6 mb-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Зробіть фото</h2><br>
+            <div class="form-group row">
+              <div class="col-sm-6">
+                <video сlass="form-control" width=240 height=240 id="video" controls autoplay></video>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group row">
+                  <button type="button" class="btn btn-secondary btn-block" id="start"><i class="fas fa-play"></i>
+                    &nbsp;&nbsp;Увімкнути камеру</button>
+                </div>
+                <div class="form-group row">
+                  <button type="button" class="btn btn-secondary btn-block" id="stop"><i class="fas fa-pause"></i>
+                    &nbsp;&nbsp;Вимкнути камеру</button>
+                </div>
+                <p align="justify">Quod tenetur ex natus at
+                    dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi
+                    labore.</p>
+      
+              </div>
+            </div>
+          </div>        
+        <div class="card-footer">
+          <button type="button" class="btn btn-info btn-block" id="snap"><i class="fas fa-user"></i>
+            &nbsp;&nbsp;Зробити знімок</button>
+        </div>
+      </div>
+    </div>
+    <!-- /.col-md-4 -->
+    <!-- <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Card Three</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary btn-sm">More Info</a>
+          </div>
+        </div>
+      </div> -->
+    <!-- /.col-md-4 -->
+
+    <div style="display:none;">
+      <img id="logo" src="img/logo.png" width="300" height="227">
+    </div>
+
+  </div>
+  <!-- /.row -->
+
+  <div id="modalabout" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; ППК НТУ "ХПІ" 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+      class speakerBadgePage {
+
+          constructor(element) {
+              this.canvas = element.querySelector("canvas");
+
+              this.speakerId = this.canvas.getAttribute("data-speaker-id");
+              this.speakerName = this.canvas.getAttribute("data-speaker-name");
+              this.speakerSurName = this.canvas.getAttribute("data-speaker-surname");
+              this.speakerTitle = this.canvas.getAttribute("data-speaker-title");
+              this.canvas.addEventListener("dragover", this.handleDragOver.bind(this));
+              this.canvas.addEventListener("drop", this.handleDrop.bind(this));
+
+              this.drawBadge();
+          }
+
+          handleDragOver(event) {
+              event.stopPropagation();
+              event.preventDefault();
+              event.dataTransfer.dropEffect = 'copy'; // Makes the browser display a "copy" cursor.
+          }
+
+          handleDrop(event) {
+              event.stopPropagation();
+              event.preventDefault();
+
+              const files = event.dataTransfer.files;
+              if (files.length == 0) return;
+
+              // More than one file could have been dropped, we'll just use the first.
+              const file = files[0];
+              if (this.isImageType(file.type)) {
+                  this.readFile(file)
+                      .then((file) => this.loadImage(file))
+                      .then((file) => this.drawBadge(file));
+              } else {
+                  alert("Please drop an image file.");
+              }
+          }
+
+          drawBadge(image) {
+              // TODO: Get the canvas's (this.canvas) context and assign to this.context
+              this.context = this.canvas.getContext("2d");
+
+              // TODO: Draw the following by calling the helper methods of `this`
+              //       background
+              //       top text
+              //       speaker name
+              //       image (or placeholder if no image)
+              //       bar code (passing this.speakerId)
+              this.drawBackground();
+              this.drawTopText();
+              this.drawSpeakerName();
+              if (image) {
+                  this.drawSpeakerImage(image);
+              } else {
+                  this.drawImagePlaceholder();
+              }
+              this.drawBarCode(this.speakerId);
+              this.drawLogo();
+              this.drawSpeakerTitle();
+          }
+
+          drawLogo() {
+              var image = document.getElementById('logo');
+              this.context.drawImage(image, 466, 56, 120, 120);
+          }
+
+          drawBackground() {
+              // TODO: Fill the canvas with a white rectangle
+              this.context.fillStyle = "white";
+              this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
+          }
+
+          drawSpeakerImage(image) {
+              // TODO: Draw the image on the canvas
+              //       Draw only the center square of the image
+              //       Draw at:
+              //       x, y = 20, 20
+              //       w, h = 160, 160
+              const size = Math.min(image.width, image.height);
+              const sourceX = image.width / 2 - size / 2;
+              const sourceY = image.height / 2 - size / 2;
+              this.context.drawImage(image, sourceX, sourceY, size, size, 20, 70, 160, 160);
+          }
+
+          drawImagePlaceholder() {
+              this.context.strokeStyle = "2px #888";
+              this.context.strokeRect(20, 70, 160, 160);
+              this.context.font = "12px sans-serif";
+              this.context.textBaseline = "middle";
+              this.context.textAlign = "center";
+              this.context.fillStyle = "black";
+              this.context.fillText("Кидайте ваше фото сюди", 100, 150);
+          }
+
+          drawTopText() {
+              this.context.font = "34.6px sans-serif";
+              this.context.fillStyle = "black";
+              this.context.textBaseline = "top";
+              this.context.textAlign = "left";
+              this.context.fillText('Полтавський політехнічний коледж', 20, 20);
+          }
+
+          drawSpeakerName() {
+              // TODO: Draw this.speakerName on the canvas
+              //       x, y = 200, 60
+              //       font = 40px sans-serif
+              //       fill style = black
+              //       text baseline = top
+              //       text align = left
+              this.context.font = "40px sans-serif";
+              this.context.fileStyle = "black";
+              this.context.baseLine = "top";
+              this.context.textAlign = "left";
+              this.context.fillText(this.speakerName, 200, 70);
+              this.context.fillText(this.speakerSurName, 200, 110);
+          }
+
+          drawSpeakerTitle() {
+              // TODO: Draw this.speakerName on the canvas
+              //       x, y = 200, 60
+              //       font = 40px sans-serif
+              //       fill style = black
+              //       text baseline = top
+              //       text align = left
+              this.context.font = "28px sans-serif";
+              this.context.fileStyle = "black";
+              this.context.baseLine = "top";
+              this.context.textAlign = "left";
+              this.context.fillText(this.speakerTitle, 200, 160);
+          }
+
+          drawBarCode(text) {
+              text = "*" + text + "*"; // Wrap in "*" deliminators.
+              const encodings = {
+                  "0": "bwbWBwBwb",
+                  "1": "BwbWbwbwB",
+                  "2": "bwBWbwbwB",
+                  "3": "BwBWbwbwb",
+                  "4": "bwbWBwbwB",
+                  "5": "BwbWBwbwb",
+                  "6": "bwBWBwbwb",
+                  "7": "bwbWbwBwB",
+                  "8": "BwbWbwBwb",
+                  "9": "bwBWbwBwb",
+                  "*": "bWbwBwBwb"
+              };
+              let x = 200, y = 190, height = 40, thick = 6, thin = 2;
+              for (let charIndex = 0; charIndex < text.length; charIndex++) {
+                  const code = encodings[text[charIndex]];
+                  for (let stripeIndex = 0; stripeIndex < code.length; stripeIndex++) {
+                      if (stripeIndex % 2 === 0) {
+                          this.context.fillStyle = "black";
+                      } else {
+                          this.context.fillStyle = "white";
+                      }
+                      const isWideStripe = code.charCodeAt(stripeIndex) < 91;
+                      if (isWideStripe) {
+                          this.context.fillRect(x, y, thick, height);
+                          x += thick;
+                      } else {
+                          this.context.fillRect(x, y, thin, height);
+                          x += thin;
+                      }
+                  }
+
+                  if (charIndex < text.length - 1) {
+                      // Space between each
+                      this.context.fillStyle = "white";
+                      this.context.fillRect(x, y, thin, height);
+                      x += thin;
+                  }
+              }
+          }
+
+          isImageType(type) {
+              const imageTypes = ["image/jpeg", "image/jpg", "image/png"];
+              return imageTypes.indexOf(type) === 0;
+          }
+
+          readFile(file) {
+              // Return a new promise.
+              return new Promise(function (resolve, reject) {
+
+                  const reader = new FileReader();
+
+                  reader.onload = function (loadEvent) {
+                      const fileDataUrl = loadEvent.target.result;
+
+                      resolve([fileDataUrl]);
+                  };
+
+                  reader.readAsDataURL(file);
+              });
+          }
+
+
+
+          loadImage(imageUrl) {
+
+              // Return a new promise.
+              return new Promise(function (resolve, reject) {
+                  const image = new Image();
+
+                  image.onload = function () {
+                      resolve(image);
+                  };
+
+                  image.src = imageUrl; // This starts the image loading
+              });
+
+          }
+      }
+
+      const badgeElement = document.querySelector(".badge");
+      new speakerBadgePage(badgeElement);
+
+  </script>
+
+  <script>
+      //
+      const video = document.getElementById('video');
+      const canvas = document.getElementById('mybadge');
+      const snap = document.getElementById("snap");
+      const start = document.getElementById("start");
+      const stop = document.getElementById("stop");
+
+
+      const constraints = {
+          audio: false,
+          video: {
+              width: 720, height: 720
+          }
+      };
+
+      // Access webcam
+      async function init() {
+          try {
+              const stream = await navigator.mediaDevices.getUserMedia(constraints);
+              handleSuccess(stream);
+          } catch (e) {
+              alert('Помилка увімкнення камери: ' + e.toString());
+          }
+      }
+
+      // Success
+      function handleSuccess(stream) {
+          window.stream = stream;
+          video.srcObject = stream;
+      }
+
+      start.addEventListener("click", function () {
+          init();
+      });
+
+
+      stop.addEventListener("click", function () {
+          var track = window.stream.getTracks()[0];
+          track.stop();
+      });
+
+
+      // Draw image
+      var context = canvas.getContext('2d');
+      snap.addEventListener("click", function () {
+          context.drawImage(video, 20, 70, 160, 160);
+      });
+
+  </script>
+
+  <script>
+
+      function makeBadge() {
+
+          const create = document.getElementById("create");
+
+          var name = $('#name').val();
+          var surname = $('#surname').val();
+          var title = $('#title').val();
+          var phone = $('#phone').val();
+
+          if (name.length != 0 && surname.length != 0 && title.length != 0 && phone.length != 0) {
+
+              $('#mybadge').attr('data-speaker-id', phone);
+              $('#mybadge').attr('data-speaker-name', name);
+              $('#mybadge').attr('data-speaker-surname', surname);
+              $('#mybadge').attr('data-speaker-title', title);
+
+              new speakerBadgePage(badgeElement);
+          }
+
+      }
+      create.addEventListener("click", function () {
+          makeBadge();
+      });
+  </script>
+
+
+
+</body>
+
+</html>
