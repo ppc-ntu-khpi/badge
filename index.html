@@ -28,7 +28,7 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#"><i class="far fa-id-badge"></i>&nbsp;&nbsp; Створення беджа працівника або
         студента коледжу</a>
@@ -71,9 +71,8 @@
       <!-- /.col-lg-8 -->
       <div class="col-lg-5">
         <h1 class="font-weight-light">Створіть свій бедж самостійно</h1>
-        <p align="justify">This is a template that is great for small businesses. It doesn't have too much fancy flare
-          to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for
-          any project you want!</p>
+        <p align="justify">Цю сторінку ви можете використати для створення беджу, який одразу ж можна роздрукувати й почати користуватись. 
+        Зверніть увагу на правильність введених вами даних, особливо - номера телефона, оскільки саме за ним відбувається індентифікація.</p>
         <!-- <a class="btn btn-primary" href="#">Call to Action!</a> -->
         <button id="print" onclick="window.print();" class="btn btn-success float-right">
           <i class="fas fa-print"></i>&nbsp;&nbsp;Друкувати бедж</button><br>
@@ -86,8 +85,7 @@
     <!-- Call to Action Well -->
     <div class="card text-white bg-info my-3 py-2 text-center">
       <div class="card-body">
-        <p class="text-white m-0">This call to action card is a great place to showcase some important information or
-          display a clever tagline!</p>
+        <p class="text-white m-0"><span class="font-weight-bold">УВАГА!</span> Спершу введіть всі дані й натисніть <span class="font-weight-bold">Сформувати бедж</span>, й лише після цього робіть фото!</p>
       </div>
     </div>
 
@@ -132,7 +130,9 @@
             <h2 class="card-title">Зробіть фото</h2><br>
             <div class="form-group row">
               <div class="col-sm-6">
-                <video сlass="form-control" width=240 height=240 id="video" controls autoplay></video>
+                  <div class="embed-responsive embed-responsive-1by1">
+                    <video сlass="form-control" width=240 height=240 id="video" controls autoplay></video>
+                  </div>
               </div>
               <div class="col-sm-6">
                 <div class="form-group row">
@@ -143,9 +143,8 @@
                   <button type="button" class="btn btn-secondary btn-block" id="stop"><i class="fas fa-pause"></i>
                     &nbsp;&nbsp;Вимкнути камеру</button>
                 </div>
-                <p align="justify">Quod tenetur ex natus at
-                    dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi
-                    labore.</p>
+                <p align="justify">Робіть фото тільки після того, як сформували бедж! 
+                  Також ви можете просто перетягти файл фото (JPG, PNG) на його місце в беджі.</p>
       
               </div>
             </div>
@@ -181,17 +180,23 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h5 class="modal-title">Про сторінку</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            <p>Цю сторінку створено з використанням елементів завдань лабораторних робіт тренінгу 
+              <a href="https://github.com/MicrosoftLearning/20480-Programming-in-HTML5-with-JavaScript-and-CSS3" target="_blank">20480</a>. 
+              Також використано <a href="https://getbootstrap.com/" target="_blank">jQuery</a> і <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> 
+              з темою <a href="https://bootswatch.com/" target="_blank">Bootswatch's</a> <a href="https://bootswatch.com/spacelab/" target="_blank">Spacelab</a>.
+              <br>
+              <br>
+              <small>Copyright &copy; Олександр Бабич 2019</small>              
+            </p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <div class="modal-footer">            
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Зрозуміло</button>
           </div>
         </div>
       </div>
